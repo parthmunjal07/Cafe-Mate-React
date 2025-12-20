@@ -1,5 +1,6 @@
 import React from "react";
 import Problems from "../assets/prob.png";
+import Button from "../components/Button";
 
 export default function Landing() {
   return (
@@ -10,22 +11,18 @@ export default function Landing() {
                          rounded-2xl mx-2 my-2"
         >
           <h1 className="text-3xl text-teal-900">CafeMate</h1>
-          <button className="text-lg text-white bg-teal-900 rounded-2xl p-2 hover:shadow-xl transition-shadow duration-300">
-            Get Started
-          </button>
+          <Button />
         </div>
       </nav>
 
-      <section className="bg-[#FFF3E9] w-full font-serif pb-36 pt-50">
+      <section className="bg-[#FFF3E9] w-full h-screen font-serif pb-36 pt-50">
         <div className="mt-10">
           <h1 className="text-6xl text-center text-teal-900">CafeMate</h1>
           <h1 className="text-4xl text-center text-teal-900 mt-2">
             One stop solution for the College Cafeteria Management
           </h1>
           <div className="flex justify-center mt-4">
-            <button className="text-2xl text-white bg-teal-900 rounded-2xl p-2 hover:shadow-xl transition-shadow duration-300 mt-2">
-              Get Started
-            </button>
+            <Button />
           </div>
         </div>
       </section>
@@ -47,6 +44,9 @@ export default function Landing() {
             <img src={Problems} className="w-[800px] mt-10 rounded-xl" alt="" />
           </div>
         </div>
+      </section>
+      <section className="bg-[#FFF3E9] w-full h-fit mt-10 py-10">
+        <h1 className="text-center text-4xl text-teal-900 font-serif">How it Works</h1>
       </section>
     </div>
   );
