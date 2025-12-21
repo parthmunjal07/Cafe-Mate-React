@@ -1,21 +1,20 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Card = () => {
+const Card = ({heading, step, description}) => {
   return (
     <StyledWrapper>
       <div className="parent">
         <div className="card">
           <div className="content-box">
-            <span className="card-title">3D Card</span>
+            <span className="card-title">{heading}</span>
             <p className="card-content">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              {description}
             </p>
-            <span className="see-more">See More</span>
           </div>
           <div className="date-box">
-            <span className="month">JUNE</span>
-            <span className="date">29</span>
+            <span className="month">Step</span> 
+            <span className="date">{step}</span>
           </div>
         </div>
       </div>
@@ -25,7 +24,7 @@ const Card = () => {
 
 const StyledWrapper = styled.div`
   .parent {
-    width: 300px;
+    width: 100%;
     padding: 20px;
     perspective: 1000px;
   }
@@ -55,7 +54,7 @@ const StyledWrapper = styled.div`
   }
 
   .content-box {
-    background: #8ed500;
+    background: #004D40;
     /* border-radius: 10px 100px 10px 10px; */
     transition: all 0.5s ease-in-out;
     padding: 60px 25px 25px 25px;
@@ -95,7 +94,7 @@ const StyledWrapper = styled.div`
     font-weight: 900;
     font-size: 9px;
     text-transform: uppercase;
-    color: #8ed500;
+    color: #004D40;
     /* border-radius: 5px; */
     background: #141414;
     padding: 0.5rem 0.7rem;
@@ -114,7 +113,7 @@ const StyledWrapper = styled.div`
     height: 60px;
     width: 60px;
     background: #141414;
-    border: 1px solid #8ed500;
+    border: 1px solid #004D40;
     /* border-radius: 10px; */
     padding: 10px;
     transform: translate3d(0px, 0px, 80px);

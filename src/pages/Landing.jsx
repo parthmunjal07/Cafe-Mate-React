@@ -1,6 +1,8 @@
 import React from "react";
 import Problems from "../assets/prob.png";
 import Button from "../components/Button";
+import Card from "../components/Card";
+import NavButton from "../components/NavButton";
 
 export default function Landing() {
   return (
@@ -11,11 +13,11 @@ export default function Landing() {
                          rounded-2xl mx-2 my-2"
         >
           <h1 className="text-3xl text-teal-900">CafeMate</h1>
-          <Button />
+          <NavButton />
         </div>
       </nav>
 
-      <section className="bg-[#FFF3E9] w-full h-screen font-serif pb-36 pt-50">
+      <section className="bg-[#fff3e9] w-full h-screen font-serif pb-36 pt-50">
         <div className="mt-10">
           <h1 className="text-6xl text-center text-teal-900">CafeMate</h1>
           <h1 className="text-4xl text-center text-teal-900 mt-2">
@@ -41,12 +43,17 @@ export default function Landing() {
             </ul>
           </div>
           <div>
-            <img src={Problems} className="w-[800px] mt-10 rounded-xl" alt="" />
+            <img src={Problems} className="w-[800px] mt-10 rounded-xl transition-transform duration-300 hover:scale-110" alt="" />
           </div>
         </div>
       </section>
       <section className="bg-[#FFF3E9] w-full h-fit mt-10 py-10">
         <h1 className="text-center text-4xl text-teal-900 font-serif">How it Works</h1>
+        <div className="grid grid-cols-1 md:grid-cols-3">
+          <Card />
+          <Card />
+          <Card />
+        </div>
       </section>
     </div>
   );
